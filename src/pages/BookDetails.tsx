@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function BookDetails() {
     const { id } = useParams();
@@ -16,13 +16,17 @@ function BookDetails() {
         localStorage.setItem('favorites', JSON.stringify([...storedFavorites, id]));
     };
 
-    if (!book) return <div>Loading...</div>;
+
+    if (!book) return <div>Carregando...</div>;
 
     return (
         <div>
+            <Link to="/">
+                <button style={{ margin: "10px", padding: "10px" }}>Voltar para Home</button>
+            </Link>
             <h1>{book.volumeInfo.title}</h1>
             <p>{book.volumeInfo.description}</p>
-            <button onClick={handleFavorite}>Add to Favorites</button>
+            <button onClick={handleFavorite}>Add aos favoritos</button>
         </div>
     );
 }

@@ -13,24 +13,30 @@ function Home() {
     };
 
     return (
-        <div>
+        <div className='home'>
             <h1>BookShelf</h1>
             <form onSubmit={handleSearch}>
-                <input
+                <input 
+                className='search-bar-input'
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search for books"
+                    placeholder="Procurar por livros"
                 />
-                <button type="submit">Search</button>
+                <button type="submit" className='search-bar-button'>Pesquisar</button>
             </form>
-            <div>
+            <div className='book-list'>
                 {books.map((book: any) => (
                     <div key={book.id}>
                         <h3>{book.volumeInfo.title}</h3>
-                        <Link to={`/book/${book.id}`}>View Details</Link>
+                        <Link to={`/book/${book.id}`}>Ver Detalhes</Link>
                     </div>
                 ))}
+                <div className='favorite-button'>
+                <Link to="/favorites">
+                <button style={{ margin: "10px", padding: "10px" }}>Ver Favoritos</button>
+            </Link>
+            </div>
             </div>
         </div>
     );

@@ -1,12 +1,210 @@
+/* Cor de fundo e fonte geral */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Cor de fundo branca */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-}
-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos do h1 */
+  h1 {
+    font-size: 3rem;
+    color: #6a1b9a; /* Roxo para o título */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Container principal */
+  .container {
+    width: 100%;
+    max-width: 900px;
     padding: 20px;
-}
-h1 {
+    box-sizing: border-box;
+  }
+  
+  /* Estilo da barra de pesquisa */
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Input da barra de pesquisa */
+  .search-bar-input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    justify-content: center;
+    border: 2px solid #f57c00; /* Borda laranja */
+    border-radius: 20px;
+    width: 70%;
+    margin-right: 10px;
+  }
+  
+  /* Botão de pesquisa */
+  .search-bar-button{
+    padding: 10px 20px;
+    background-color: #f57c00; /* Cor laranja */
+    color: #fff;
+    font-size: 1rem;
+    justify-content: center;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-bar-button:hover {
+    background-color: #ff8f00; /* Laranja mais claro ao passar o mouse */
+  }
+  
+  /* Estilos dos resultados da busca */
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .book-item {
+    width: 250px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .book-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  .book-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-item .book-info {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .book-item h2 {
+    font-size: 1.2rem;
     color: #333;
+    margin: 10px 0;
+  }
+  
+  .book-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Estilos da página de favoritos */
+  .favorites-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .favorites-page ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .favorites-page li {
+    border: 1px solid #e0e0e0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .favorites-page li h3 {
+    color: #333;
+  }
+  
+  .favorites-page li p {
+    color: #777;
+  }
+  
+  /* Botão para voltar à home na página de favoritos */
+  .back-button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #9c4dcc; /* Roxo mais claro */
+  }
+  
+  /* Estilos gerais de transição */
+  button {
+    transition: background-color 0.3s ease;
+  }
+  
+  input,
+  button {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .search-bar input[type="text"] {
+      width: 60%;
+    }
+  
+    .search-bar button {
+      width: 30%;
+    }
+  
+    .book-list {
+      flex-direction: column;
+    }
+  
+    .book-item {
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home input {
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 0 15px;
+    border: 1px solid #333;
+}
+
+.home button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.book-list div {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
 }
