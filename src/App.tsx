@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 import BookDetails from './pages/BookDetails';
 
-function App() {
+const App: React.FC = () => {
     return (
         <Router>
             <Routes>
@@ -14,6 +14,6 @@ function App() {
             </Routes>
         </Router>
     );
-}
+};
 
 export default App;
